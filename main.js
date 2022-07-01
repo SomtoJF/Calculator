@@ -39,3 +39,11 @@ clear.addEventListener('click',function (){
     showExpression.textContent = '';
     showResult.textContent = ''}
     );
+
+plusMinus.addEventListener('click', function(){
+    showResult.textContent *= -1;
+});
+
+point.addEventListener('click', function(){
+    showResult.textContent += '.';
+})
