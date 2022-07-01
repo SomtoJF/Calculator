@@ -34,3 +34,8 @@ eight.addEventListener('click', function(){ showResult.textContent += this.value
 nine.addEventListener('click', function(){ showResult.textContent += this.value;});
 zero.addEventListener('click', function(){ showResult.textContent += this.value;});
 zeroZero.addEventListener('click', function(){ showResult.textContent += this.value;});
+
+clear.addEventListener('click',function (){ 
+    showExpression.textContent = '';
+    showResult.textContent = ''}
+    );
