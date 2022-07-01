@@ -24,3 +24,13 @@ let showResult = document.getElementById('showresult');
 let showExpression = document.getElementById('showexpression');
 
 one.addEventListener('click', function(){ showResult.textContent += this.value;});
+two.addEventListener('click', function(){ showResult.textContent += this.value;});
+three.addEventListener('click', function(){ showResult.textContent += this.value;});
+four.addEventListener('click', function(){ showResult.textContent += this.value;});
+five.addEventListener('click', function(){ showResult.textContent += this.value;});
+six.addEventListener('click', function(){ showResult.textContent += this.value;});
+seven.addEventListener('click', function(){ showResult.textContent += this.value;});
+eight.addEventListener('click', function(){ showResult.textContent += this.value;});
+nine.addEventListener('click', function(){ showResult.textContent += this.value;});
+zero.addEventListener('click', function(){ showResult.textContent += this.value;});
+zeroZero.addEventListener('click', function(){ showResult.textContent += this.value;});
