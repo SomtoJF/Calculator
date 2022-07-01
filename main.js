@@ -18,3 +18,9 @@ let minus = document.getElementById('minus');
 let multiply = document.getElementById('multiply');
 let equals = document.getElementById('equals');
 let point = document.getElementById('point');
+let display = document.getElementById('display');
+let numbers = document.getElementsByClassName('numbers');
+let showResult = document.getElementById('showresult');
+let showExpression = document.getElementById('showexpression');
+
+one.addEventListener('click', function(){ showResult.textContent += this.value;});
