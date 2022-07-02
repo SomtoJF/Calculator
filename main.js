@@ -47,3 +47,7 @@ plusMinus.addEventListener('click', function(){
 point.addEventListener('click', function(){
     showResult.textContent += '.';
 })
+
+percent.addEventListener('click', function(){
+    showResult.textContent /= 100;
+});
