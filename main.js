@@ -22,22 +22,77 @@ let display = document.getElementById('display');
 let numbers = document.getElementsByClassName('numbers');
 let showResult = document.getElementById('showresult');
 let showExpression = document.getElementById('showexpression');
+let firstNumber, secondNumber, operation;
 
-one.addEventListener('click', function(){ showResult.textContent += this.value;});
-two.addEventListener('click', function(){ showResult.textContent += this.value;});
-three.addEventListener('click', function(){ showResult.textContent += this.value;});
-four.addEventListener('click', function(){ showResult.textContent += this.value;});
-five.addEventListener('click', function(){ showResult.textContent += this.value;});
-six.addEventListener('click', function(){ showResult.textContent += this.value;});
-seven.addEventListener('click', function(){ showResult.textContent += this.value;});
-eight.addEventListener('click', function(){ showResult.textContent += this.value;});
-nine.addEventListener('click', function(){ showResult.textContent += this.value;});
-zero.addEventListener('click', function(){ showResult.textContent += this.value;});
-zeroZero.addEventListener('click', function(){ showResult.textContent += this.value;});
+one.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+two.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+three.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+four.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+five.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+six.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+seven.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+eight.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+nine.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+zero.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
+
+zeroZero.addEventListener('click', function(){ 
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += this.value;});
 
 clear.addEventListener('click',function (){ 
     showExpression.textContent = '';
-    showResult.textContent = ''}
+    showResult.textContent = '0'}
     );
 
 plusMinus.addEventListener('click', function(){
@@ -51,3 +106,23 @@ point.addEventListener('click', function(){
 percent.addEventListener('click', function(){
     showResult.textContent /= 100;
 });
+
+function operate(firstNumber,secondNumber,operation){
+    if(operation == '+'){
+        showResult.textContent = Number(firstNumber) + Number(secondNumber);
+    }
+}
+function equalsTo(){
+    secondNumber = showResult.textContent;
+    showExpression.textContent += secondNumber;
+    operate(firstNumber,secondNumber,operation);
+};
+equals.addEventListener('click', equalsTo);
+
+add.addEventListener('click', function(){
+    operation = '+';
+    firstNumber = showResult.textContent;
+    equalsTo;
+    showResult.textContent = '0';
+    showExpression.textContent = `${firstNumber} + `;
+})
