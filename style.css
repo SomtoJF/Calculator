@@ -28,6 +28,9 @@ body{
     align-items: flex-end;
     gap: 5px;
 }
+#showresult{
+    font-size: 40px;
+}
 button{
     display: block;
     color: white;
