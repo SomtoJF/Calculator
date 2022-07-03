@@ -22,7 +22,7 @@ let display = document.getElementById('display');
 let numbers = document.getElementsByClassName('numbers');
 let showResult = document.getElementById('showresult');
 let showExpression = document.getElementById('showexpression');
-let firstNumber, secondNumber, operation;
+let firstNumber = null, secondNumber = null, operation;
 
 one.addEventListener('click', function(){ 
     if(showResult.textContent == '0'){
@@ -92,7 +92,8 @@ zeroZero.addEventListener('click', function(){
 
 clear.addEventListener('click',function (){ 
     showExpression.textContent = '';
-    showResult.textContent = '0'}
+    showResult.textContent = '0';
+    firstNumber = secondNumber = null}
     );
 
 plusMinus.addEventListener('click', function(){
@@ -111,18 +112,31 @@ function operate(firstNumber,secondNumber,operation){
     if(operation == '+'){
         showResult.textContent = Number(firstNumber) + Number(secondNumber);
     }
-}
+    else if(operation = '-'){
+        showResult.textContent = Number(firstNumber) - Number(secondNumber);
+    }
+    else if(operation = '*'){
+        showResult.textContent = Number(firstNumber) * Number(secondNumber);
+    }
+    else if(operation = '/'){
+        if(secondNumber == '0'){
+            showResult.textContent = 'Invalid';
+        }
+        showResult.textContent = Number(firstNumber) / Number(secondNumber);
+    };
+};
 function equalsTo(){
     secondNumber = showResult.textContent;
-    showExpression.textContent += secondNumber;
+    showExpression.textContent = '';
     operate(firstNumber,secondNumber,operation);
+    firstNumber = secondNumber = null;
 };
 equals.addEventListener('click', equalsTo);
 
 add.addEventListener('click', function(){
     operation = '+';
+    equalsTo();
     firstNumber = showResult.textContent;
-    equalsTo;
     showResult.textContent = '0';
     showExpression.textContent = `${firstNumber} + `;
 })
