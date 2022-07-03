@@ -113,7 +113,12 @@ function operate(firstNumber,secondNumber,operation){
         showResult.textContent = Number(firstNumber) + Number(secondNumber);
     }
     else if(operation = '-'){
-        showResult.textContent = Number(firstNumber) - Number(secondNumber);
+        if(firstNumber == null){
+
+        }else{
+            showResult.textContent = Number(firstNumber) - Number(secondNumber);
+        };
+        
     }
     else if(operation = '*'){
         showResult.textContent = Number(firstNumber) * Number(secondNumber);
@@ -139,4 +144,12 @@ add.addEventListener('click', function(){
     firstNumber = showResult.textContent;
     showResult.textContent = '0';
     showExpression.textContent = `${firstNumber} + `;
+})
+
+minus.addEventListener('click', function(){
+    operation = '-';
+    equalsTo();
+    firstNumber = showResult.textContent;
+    showResult.textContent = '0';
+    showExpression.textContent = `${firstNumber} - `;
 })
