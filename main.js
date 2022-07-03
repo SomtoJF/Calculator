@@ -139,16 +139,16 @@ function equalsTo(){
 equals.addEventListener('click', equalsTo);
 
 add.addEventListener('click', function(){
-    operation = '+';
     equalsTo();
+    operation = '+';
     firstNumber = showResult.textContent;
     showResult.textContent = '0';
     showExpression.textContent = `${firstNumber} + `;
 })
 
 minus.addEventListener('click', function(){
-    operation = '-';
     equalsTo();
+    operation = '-';
     firstNumber = showResult.textContent;
     showResult.textContent = '0';
     showExpression.textContent = `${firstNumber} - `;
