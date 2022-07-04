@@ -23,72 +23,69 @@ let numbers = document.getElementsByClassName('numbers');
 let showResult = document.getElementById('showresult');
 let showExpression = document.getElementById('showexpression');
 let firstNumber = null, secondNumber = null, operation;
+let value;
+
+function displayNumber(value){
+    if(showResult.textContent == '0'){
+        showResult.textContent = '';
+    };
+    showResult.textContent += value;
+};
 
 one.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 two.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 three.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 four.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 five.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 six.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 seven.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 eight.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 nine.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 zero.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 zeroZero.addEventListener('click', function(){ 
-    if(showResult.textContent == '0'){
-        showResult.textContent = '';
-    };
-    showResult.textContent += this.value;});
+    value = this.value;
+    displayNumber(value);
+});
 
 clear.addEventListener('click',function (){ 
     showExpression.textContent = '';
