@@ -145,36 +145,34 @@ function equalsTo(){
 };
 equals.addEventListener('click', equalsTo);
 
+function formatDisplay(operation){
+    firstNumber = showResult.textContent;
+    showResult.textContent = '0';
+    showExpression.textContent = `${firstNumber} ${operation} `;
+}
+
 add.addEventListener('click', function(){
     equalsTo();
     operation = '+';
-    firstNumber = showResult.textContent;
-    showResult.textContent = '0';
-    showExpression.textContent = `${firstNumber} + `;
+    formatDisplay(operation);
 })
 
 minus.addEventListener('click', function(){
     equalsTo();
     operation = '-';
-    firstNumber = showResult.textContent;
-    showResult.textContent = '0';
-    showExpression.textContent = `${firstNumber} - `;
+    formatDisplay(operation);
 })
 
 multiply.addEventListener('click', function(){
     equalsTo();
     operation = 'x';
-    firstNumber = showResult.textContent;
-    showResult.textContent = '0';
-    showExpression.textContent = `${firstNumber} x `;
+    formatDisplay(operation);
 })
 
 divide.addEventListener('click', function(){
     equalsTo();
     operation = '/';
-    firstNumber = showResult.textContent;
-    showResult.textContent = '0';
-    showExpression.textContent = `${firstNumber} / `;
+    formatDisplay(operation);
 })
 
 document.addEventListener('keydown', function (e){
