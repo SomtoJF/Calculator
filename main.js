@@ -176,3 +176,21 @@ divide.addEventListener('click', function(){
     showResult.textContent = '0';
     showExpression.textContent = `${firstNumber} / `;
 })
+
+document.addEventListener('keydown', function (e){
+    if(Number(e.key)){
+        if(showResult.textContent == '0'){
+            showResult.textContent = '';
+        };
+        showResult.textContent += e.key;
+    }
+    else if(e.key == '0'){
+        if(showResult.textContent == '0'){
+            showResult.textContent = '';
+        };
+        showResult.textContent += e.key;
+    }
+    else{
+
+    }
+})
