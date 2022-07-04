@@ -62,3 +62,14 @@ button:active{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
 }
+
+@media all and (max-width: 550px) {
+    body #container{
+        width: 80%;
+    }
+}
+@media all and (max-width: 1000px) {
+    #container{
+        width: 70%;
+    }
+}
