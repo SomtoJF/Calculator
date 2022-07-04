@@ -109,32 +109,42 @@ percent.addEventListener('click', function(){
 });
 
 function operate(firstNumber,secondNumber,operation){
-    if(operation == '+'){
-        showResult.textContent = Number(firstNumber) + Number(secondNumber);
-    }
-    else if(operation = '-'){
-        if(firstNumber == null){
+    switch (operation){
+        case '+':
+            showResult.textContent = Number(firstNumber) + Number(secondNumber);
+            break;
 
-        }else{
-            showResult.textContent = Number(firstNumber) - Number(secondNumber);
-        };
+        case '-':
+            if(firstNumber == null){
+
+            }
+            else{
+                showResult.textContent = Number(firstNumber) - Number(secondNumber);
+            };
+            break;
+
+        case 'x':
+            showResult.textContent = Number(firstNumber) * Number(secondNumber);
+            break;
+
+        case '/':
+            if(secondNumber == '0'){
+                showResult.textContent = 'Invalid';
+            }
+            else{
+            showResult.textContent = Number(firstNumber) / Number(secondNumber);
+            };
+            break;
         
-    }
-    else if(operation = '*'){
-        showResult.textContent = Number(firstNumber) * Number(secondNumber);
-    }
-    else if(operation = '/'){
-        if(secondNumber == '0'){
-            showResult.textContent = 'Invalid';
-        }
-        showResult.textContent = Number(firstNumber) / Number(secondNumber);
     };
+
 };
+
 function equalsTo(){
     secondNumber = showResult.textContent;
     showExpression.textContent = '';
     operate(firstNumber,secondNumber,operation);
-    firstNumber = secondNumber = null;
+    firstNumber = secondNumber = operation = null;
 };
 equals.addEventListener('click', equalsTo);
 
@@ -152,4 +162,20 @@ minus.addEventListener('click', function(){
     firstNumber = showResult.textContent;
     showResult.textContent = '0';
     showExpression.textContent = `${firstNumber} - `;
+})
+
+multiply.addEventListener('click', function(){
+    equalsTo();
+    operation = 'x';
+    firstNumber = showResult.textContent;
+    showResult.textContent = '0';
+    showExpression.textContent = `${firstNumber} x `;
+})
+
+divide.addEventListener('click', function(){
+    equalsTo();
+    operation = '/';
+    firstNumber = showResult.textContent;
+    showResult.textContent = '0';
+    showExpression.textContent = `${firstNumber} / `;
 })
