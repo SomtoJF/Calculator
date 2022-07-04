@@ -188,6 +188,29 @@ document.addEventListener('keydown', function (e){
         };
         showResult.textContent += e.key;
     }
+    else if(e.key == '+'){
+        equalsTo();
+        operation = '+';
+        formatDisplay(operation);
+    }
+    else if(e.key == '-'){
+        equalsTo();
+        operation = '-';
+        formatDisplay(operation);
+    }
+    else if(e.key == '*'){
+        equalsTo();
+        operation = 'x';
+        formatDisplay(operation);
+    }
+    else if(e.key == '/'){
+        equalsTo();
+        operation = '/';
+        formatDisplay(operation);
+    }
+    else if(e.key == '='){
+        equalsTo();
+    }
     else{
 
     }
