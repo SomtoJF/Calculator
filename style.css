@@ -24,7 +24,7 @@ body{
     color: white;
     display: flex;
     flex-direction: column-reverse;
-    /* justify-content: flex-end; */
+    overflow-x: hidden;
     align-items: flex-end;
     gap: 5px;
 }
