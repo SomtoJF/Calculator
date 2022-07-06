@@ -217,6 +217,11 @@ document.addEventListener('keydown', function (e){
     else if(e.key == '='){
         equalsTo();
     }
+    else if(e.key == 'c' || e.key == 'C'){
+        showExpression.textContent = '';
+        showResult.textContent = '0';
+        firstNumber = secondNumber = null;
+    }
     else{
 
     }
