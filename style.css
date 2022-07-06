@@ -1,3 +1,6 @@
+html{
+    font-size: 30px;
+}
 body{
     width: 100vw;
     height: 100vh;
@@ -5,6 +8,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 #container{
     width: 30vw;
@@ -17,7 +22,7 @@ body{
 }
 #display{
     font-weight: 500;
-    font-size: larger;
+    font-size: 1rem;
     height: 40%;
     width: 90%;
     border-bottom: solid white 1px;
@@ -29,14 +34,15 @@ body{
     gap: 5px;
 }
 #showresult{
-    font-size: 40px;
+    font-size: 1.5rem;
 }
 button{
+    width: 100%;
     display: block;
     color: white;
     background-color: #202A44;
     border: none;
-    font-size: 200%;
+    font-size: 1rem;
     font-weight: 100;
 }
 button:active{
@@ -63,9 +69,9 @@ button:active{
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
 }
 
-@media all and (max-width: 550px) {
+@media all and (max-width: 500px) {
     body #container{
-        width: 80%;
+        width: 90%;
     }
 }
 @media all and (max-width: 1000px) {
