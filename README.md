@@ -6,6 +6,8 @@ This is a calculator capable of performing basic arithmetic functions built with
 * Option to clear memory and display
 * Support for decimals and fractions
 * Can perform percentage calculations
+* Keyboard Support
+
 ### Note:
 The calculator performs calculations one at a time as values and operators are chained. Therefore, the user is to take into account order of precedence before he/she begins inputting expressions.
 ## Links
