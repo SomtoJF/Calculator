@@ -129,7 +129,13 @@ function operate(firstNumber,secondNumber,operation){
                 showResult.textContent = 'Invalid';
             }
             else{
-            showResult.textContent = Number(firstNumber) / Number(secondNumber);
+                if((Number(firstNumber) / Number(secondNumber)) % 1 == 0){
+                    showResult.textContent = Number(firstNumber) / Number(secondNumber);
+                }
+                else{
+                    let answer = Number(firstNumber) / Number(secondNumber);
+                    showResult.textContent = answer.toFixed(3);
+                }
             };
             break;
         
