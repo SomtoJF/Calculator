@@ -188,8 +188,8 @@ document.addEventListener('keydown', function (e){
         };
         showResult.textContent += e.key;
     }
-    else if(e.key == '0'){
-        if(showResult.textContent == '0'){
+    else if(e.key == '0' || e.key == '.'){
+        if(showResult.textContent == '0' && e.key == '0'){
             showResult.textContent = '';
         };
         showResult.textContent += e.key;
