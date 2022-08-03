@@ -108,7 +108,7 @@ percent.addEventListener('click', function(){
 function operate(firstNumber,secondNumber,operation){
     switch (operation){
         case '+':
-            showResult.textContent = Number(firstNumber) + Number(secondNumber);
+            showResult.textContent = ((Number(firstNumber) * 100 )+ (Number(secondNumber) * 100)) / 100;
             break;
 
         case '-':
